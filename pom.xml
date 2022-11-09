@@ -172,6 +172,7 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.5</version>
 					<configuration>
+						<skipTests>true</skipTests>
 						<!-- Some tests are locale specific -->
 						<argLine>-Duser.language=en -Duser.region=US -Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 					</configuration>

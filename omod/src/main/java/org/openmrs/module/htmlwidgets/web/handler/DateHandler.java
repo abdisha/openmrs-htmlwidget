@@ -22,6 +22,7 @@ import org.openmrs.annotation.Handler;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.htmlwidgets.web.WidgetConfig;
 import org.openmrs.module.htmlwidgets.web.html.DateWidget;
+import org.openmrs.module.htmlwidgets.web.html.EthiopiaDateWidget;
 import org.openmrs.module.htmlwidgets.web.html.WidgetFactory;
 import org.springframework.util.StringUtils;
 
@@ -36,8 +37,9 @@ public class DateHandler extends WidgetHandler {
 	 */
 	@Override
 	public void render(WidgetConfig config, Writer w) throws IOException {	
-		DateWidget widget = WidgetFactory.getInstance(DateWidget.class, config);
-		widget.render(config, w);
+		//DateWidget widget = WidgetFactory.getInstance(DateWidget.class, config);
+		EthiopiaDateWidget eWidget = WidgetFactory.getInstance(EthiopiaDateWidget.class, config);
+		eWidget.render(config, w);
 	}
 	
 	/** 
